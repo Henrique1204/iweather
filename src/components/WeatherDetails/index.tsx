@@ -6,7 +6,7 @@ import wind from '@assets/wind.svg';
 import drop from '@assets/drop.svg';
 import thermometer from '@assets/thermometer.svg';
 
-import { WeatherItem } from '@components/WeatherItem';
+import WeatherItem from '@components/WeatherItem';
 
 import { styles } from './styles';
 
