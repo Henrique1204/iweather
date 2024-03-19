@@ -1,28 +1,41 @@
-import { View, TextInput, TextInputProps, ActivityIndicator } from 'react-native';
+import {
+  View,
+  TextInput,
+  TextInputProps,
+  ActivityIndicator,
+} from "react-native";
 
-import { styles } from './styles';
-import { theme } from '@styles/theme';
+import { theme } from "@styles/theme";
 
-type Props = TextInputProps & {
+import { styles } from "./styles";
+
+type InputProps = TextInputProps & {
+  testId?: string;
   isLoading?: boolean;
-}
+};
 
-export function Input({ isLoading = false, ...rest }: Props) {
+const Input: React.FC<InputProps> = ({
+  testId = "input",
+  isLoading = false,
+  ...props
+}) => {
   return (
     <View style={styles.container}>
       <TextInput
+        testID={testId}
         style={styles.input}
         placeholderTextColor={theme.colors.gray_400}
-        {...rest}
+        {...props}
       />
 
-      {
-        isLoading && (
-          <ActivityIndicator
-            color={theme.colors.blue_light}
-          />
-        )
-      }
+      {isLoading && (
+        <ActivityIndicator
+          testID={`${testId}-activity-indicator`}
+          color={theme.colors.blue_light}
+        />
+      )}
     </View>
   );
-}
+};
+
+export default Input;
