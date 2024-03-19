@@ -16,7 +16,7 @@ import {
 } from "@services/getWeatherByCityService";
 
 import { Loading } from "@components/Loading";
-import { NextDays } from "@components/NextDays";
+import NextDays from "@components/NextDays";
 import SelectList from "@components/SelectList";
 import { WeatherToday } from "@components/WeatherToday";
 import { WeatherDetails } from "@components/WeatherDetails";

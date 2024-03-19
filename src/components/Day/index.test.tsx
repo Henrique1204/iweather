@@ -1,22 +1,12 @@
 import { render, screen } from "@testing-library/react-native";
 
-import clearDay from "@assets/clear_day.svg";
+import { day } from "@__tests__/mocks/components/day";
 
 import Day from ".";
 
 describe("Component: Day", () => {
   it("Should be render day.", () => {
-    render(
-      <Day
-        data={{
-          day: "19/03",
-          min: "30°C",
-          max: "34°C",
-          icon: clearDay,
-          weather: "Céu limpo",
-        }}
-      />
-    );
+    render(<Day data={day} />);
 
     expect(screen.getByText("19/03")).toBeTruthy();
   });
