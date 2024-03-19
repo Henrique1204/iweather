@@ -1,6 +1,4 @@
-
-import { CityAPIResponse } from '@services/getCityByNameService';
-
+import { CityAPIResponse } from "@services/getCityByNameService";
 
 export const mockCityAPIResponse: CityAPIResponse = {
   id: "1",
