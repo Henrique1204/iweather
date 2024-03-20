@@ -25,7 +25,7 @@ const SelectList: React.FC<SelectListProps> = ({
   return (
     <View style={styles.container}>
       <Input
-        testId={testId}
+        testId={`${testId}-input`}
         placeholder={props.placeholder}
         onChangeText={props.onChange}
         isLoading={props.isLoading}
