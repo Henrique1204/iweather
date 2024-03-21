@@ -1,6 +1,6 @@
 name: CI
 
-# Definindo onde/quando será executado o workflow.
+# Definindo que o workflow deverá rodar após push na main.
 on:
   push:
     branches:
@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      
+
       - name: Intall dependencies
         run: npm install
 
