@@ -1,0 +1,44 @@
+{
+  "cli": {
+    "version": ">= 3.17.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "autoIncrement": true,
+      "android": {
+        "distribution": "internal",
+        "autoIncrement": "versionCode"
+      },
+      "ios": {
+        "simulator": true,
+        "autoIncrement": "buildNumber"
+      },
+      "channel": "preview"
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "autoIncrement": "versionCode"
+      },
+      "ios": {
+        "image": "latest",
+        "autoIncrement": "buildNumber"
+      },
+      "channel": "production"
+    }
+  },
+  "submit": {
+    "preview": {
+      "android": {
+        "track": "internal",
+        "servicesAccountKeyPath": "google-services.json",
+        "releaseStatus": "draft"
+      },
+      "ios": {
+        "appleId": "",
+        "ascAppId": ""
+      }
+    }
+  }
+}
